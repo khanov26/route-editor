@@ -25,7 +25,8 @@ const YandexMap: React.FC<Props> = ({points, mapCenter, onMoveMapCenter, onMoveP
                         key={point.coordinates.toString()}
                         geometry={point.coordinates}
                         properties={{
-                            balloonContentBody: point.title,
+                            balloonContentHeader: point.title,
+                            balloonContentBody: point.coordinates.join(', '),
                         }}
                         options={{
                             draggable: true,
