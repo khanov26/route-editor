@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {Map, Placemark, Polyline, YMaps} from "react-yandex-maps";
 import {Point} from "../types";
 
@@ -15,10 +15,15 @@ const YandexMap: React.FC<Props> = ({points, mapCenter, onMoveMapCenter, onMoveP
         onMoveMapCenter(newCenter);
     };
 
+    const ymaps = useRef<any>(null);
+
     return (
-        <YMaps>
+        <YMaps query={{apikey: process.env.REACT_APP_YANDEX_API_KEY}}>
             <Map width="100%" height="100%" state={{center: mapCenter, zoom: 9}}
-                 onActionEnd={handleMoveMap}
+                 onActionEnd={handleMoveMap} modules={['geocode']}
+                 onLoad={y => {
+                     ymaps.current = y;
+                 }}
             >
                 {points.map(point =>
                     <Placemark
@@ -26,7 +31,6 @@ const YandexMap: React.FC<Props> = ({points, mapCenter, onMoveMapCenter, onMoveP
                         geometry={point.coordinates}
                         properties={{
                             balloonContentHeader: point.title,
-                            balloonContentBody: point.coordinates.join(', '),
                         }}
                         options={{
                             draggable: true,
@@ -35,6 +39,17 @@ const YandexMap: React.FC<Props> = ({points, mapCenter, onMoveMapCenter, onMoveP
                         onDragEnd={(e: any) => {
                             const coordinates = e.originalEvent.target.geometry.getCoordinates();
                             onMovePlacemark(point, coordinates);
+                        }}
+                        onClick={(e: any) => {
+                            const targetPlacemark = e.get('target');
+                            ymaps.current.geocode(point.coordinates)
+                                .then((result: any) => {
+                                    const geoObjectAddress = result.geoObjects.get(0).getAddressLine();
+                                    targetPlacemark.properties.set({
+                                        balloonContent: geoObjectAddress,
+                                    });
+                                })
+                                .catch((error: any) => console.log(error));
                         }}
                     />
                 )}
