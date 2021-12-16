@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Demo
 
-https://route-editor-d27fa.web.app/
+https://khanov26.github.io/route-editor/
 
 ## Available Scripts
 
