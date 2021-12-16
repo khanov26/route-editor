@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/funbox/route-editor/static/css/main.cda511aa.chunk.css",
-    "main.js": "/funbox/route-editor/static/js/main.df3cc6c5.chunk.js",
-    "main.js.map": "/funbox/route-editor/static/js/main.df3cc6c5.chunk.js.map",
-    "runtime-main.js": "/funbox/route-editor/static/js/runtime-main.c833be1e.js",
-    "runtime-main.js.map": "/funbox/route-editor/static/js/runtime-main.c833be1e.js.map",
-    "static/css/2.4659568d.chunk.css": "/funbox/route-editor/static/css/2.4659568d.chunk.css",
-    "static/js/2.8bf3e398.chunk.js": "/funbox/route-editor/static/js/2.8bf3e398.chunk.js",
-    "static/js/2.8bf3e398.chunk.js.map": "/funbox/route-editor/static/js/2.8bf3e398.chunk.js.map",
-    "index.html": "/funbox/route-editor/index.html",
-    "static/css/2.4659568d.chunk.css.map": "/funbox/route-editor/static/css/2.4659568d.chunk.css.map",
-    "static/css/main.cda511aa.chunk.css.map": "/funbox/route-editor/static/css/main.cda511aa.chunk.css.map",
-    "static/js/2.8bf3e398.chunk.js.LICENSE.txt": "/funbox/route-editor/static/js/2.8bf3e398.chunk.js.LICENSE.txt"
+    "main.css": "/route-editor/static/css/main.cda511aa.chunk.css",
+    "main.js": "/route-editor/static/js/main.df3cc6c5.chunk.js",
+    "main.js.map": "/route-editor/static/js/main.df3cc6c5.chunk.js.map",
+    "runtime-main.js": "/route-editor/static/js/runtime-main.a3d3671d.js",
+    "runtime-main.js.map": "/route-editor/static/js/runtime-main.a3d3671d.js.map",
+    "static/css/2.4659568d.chunk.css": "/route-editor/static/css/2.4659568d.chunk.css",
+    "static/js/2.8bf3e398.chunk.js": "/route-editor/static/js/2.8bf3e398.chunk.js",
+    "static/js/2.8bf3e398.chunk.js.map": "/route-editor/static/js/2.8bf3e398.chunk.js.map",
+    "index.html": "/route-editor/index.html",
+    "static/css/2.4659568d.chunk.css.map": "/route-editor/static/css/2.4659568d.chunk.css.map",
+    "static/css/main.cda511aa.chunk.css.map": "/route-editor/static/css/main.cda511aa.chunk.css.map",
+    "static/js/2.8bf3e398.chunk.js.LICENSE.txt": "/route-editor/static/js/2.8bf3e398.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c833be1e.js",
+    "static/js/runtime-main.a3d3671d.js",
     "static/css/2.4659568d.chunk.css",
     "static/js/2.8bf3e398.chunk.js",
     "static/css/main.cda511aa.chunk.css",
